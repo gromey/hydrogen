@@ -39,7 +39,6 @@ func (e *engine) Fields(v any, omitempty bool, fieldNames ...string) (Fields, er
 
 type state struct {
 	*engine
-	structFields
 }
 
 var statePool sync.Pool
