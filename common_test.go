@@ -12,8 +12,7 @@ func equal(t *testing.T, exp, got interface{}) {
 }
 
 func Test_isEmptyValue(t *testing.T) {
-	var a any
-	a = 77
+	a := 77
 	var b any
 
 	var tests = []struct {

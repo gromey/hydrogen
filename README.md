@@ -1,7 +1,9 @@
-# hydrogen
+# Hydrogen
 
 ![https://img.shields.io/github/v/tag/gromey/hydrogen](https://img.shields.io/github/v/tag/gromey/hydrogen)
 ![https://img.shields.io/github/license/gromey/hydrogen](https://img.shields.io/github/license/gromey/hydrogen)
+
+## Overview
 
 `hydrogen` is a library designed to get names, values and pointers to structure fields.
 
@@ -9,8 +11,8 @@
 
 `hydrogen` can be installed like any other Go library through `go get`:
 
-```console
-go get github.com/gromey/hydrogen@latest
+```sh
+  go get github.com/gromey/hydrogen@latest
 ```
 
 ## Getting Started
@@ -25,7 +27,7 @@ import (
 )
 
 type Type struct {
-	A string           // will be returned with the 'A' name
+	A string // will be returned with the 'A' name
 	B string `tag:"b"` // will be returned with the 'b' name
 	C string `tag:"-"` // will be skipped
 	D string `tag:"d"`
@@ -75,4 +77,5 @@ func main() {
 	fmt.Println("pointers:", &s.A == pointers[0], &s.B == pointers[1])
 	// pointers: true, true
 }
+
 ```
